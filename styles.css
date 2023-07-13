@@ -1,0 +1,216 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 1000px;
+  padding-top: 100px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.fa-regular, .far {
+  font-weight: 600 !important;
+}
+.navbar>.container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+  animation-name: logo;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+.navbar-brand:hover {
+  background-color: inherit;
+  color: inherit;
+}
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  flex-grow: 1;
+}
+nav ul li {
+  display: inline;
+  padding: 0 1rem;
+}
+nav ul li a {
+  color: #000;
+  padding: 0.5rem;
+}
+nav ul li:last-child{
+  padding-right: 0;
+}
+nav ul li.active a {
+  background-color: #333;
+  color: #fff;
+}
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+} 
+.container {
+  max-width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  padding: 5.5rem;
+}
+.navbar {
+  background-color: #f8f8f8;
+  border-bottom:1px solid #e7e7e7;
+}
+.navbar-fixed-top {
+  top: 0;
+}
+
+.banner-text-slide {
+  position: relative;
+  animation-name: banner-text;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  
+}
+.banner-text-slide h2 {
+  font-size: 2.5rem;
+}
+
+.banner-phone-slide {
+  animation-name: banner-phone;
+  animation-duration: 2s;
+  position: relative;
+  margin-bottom: -4px;
+  
+}
+.navbar-nav.right {
+  position: relative;
+  animation-name: banner-text;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+.green-box {
+  background-color: aquamarine;
+}
+.yellow-box {
+  background-color: rgb(212, 250, 125);
+  position: relative;
+  animation-name: content-rotate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+.blue-box {
+  background-color: rgb(38, 239, 61);
+  animation-name: content-rotate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+.text-box {
+  background-color: #fff;
+  width: 50%;
+  padding: 0.5rem 1.5rem;
+}
+.one-col {
+  min-height: 600px;
+  margin-bottom: 2rem;
+  
+}
+.green-box-inside {
+  display: flex;
+  align-items: center;
+  height: 185px;
+}
+.one-col,.two-cols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  overflow: hidden;
+}
+
+@media (max-width:768px) {
+  .one-col, .two-cols {
+    display: block;
+  }
+}
+@keyframes content-rotate {
+  0% {
+    transform: rotate(29deg);
+    position: relative;
+    left: -857px;
+  }
+  50% {
+
+  }
+  100% {
+    transform: rotate(0);
+    position: relative;
+    left: 0;
+  }
+}
+@keyframes logo {
+  0%{
+    left: -200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% { 
+    left: 0;
+    opacity: 1;
+  }
+  
+}
+
+@keyframes banner-text {
+  0%{
+    right: -200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {  right: 0; opacity: 1;}
+  
+}
+
+@keyframes banner-phone {
+  0%{
+    bottom: -100px;
+    opacity: 0;
+  }
+  50% {
+    
+  }
+  100% {  
+    opacity: 1;
+    bottom: 0;
+  }
+  
+}
