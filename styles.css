@@ -4,56 +4,58 @@ body {
   margin: 0;
   color: black;
   font-family: 'Montserrat', sans-serif;
-  min-height: 1000px;
-  padding-top: 100px;
+  padding-top: 250px;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
   color: #333;
 }
-.fa-regular, .far {
-  font-weight: 600 !important;
-}
-.navbar>.container {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-}
 img {
   height: auto;
   max-width: 100%;
 }
+.fa-regular, .far {
+  font-weight: 600 !important;
+}
+.navbar>.container {
+  display: block;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navbar-brand {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
   position: relative;
   animation-name: logo;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
 }
-.navbar-brand:hover {
-  background-color: inherit;
-  color: inherit;
-}
+
 .navbar-inner {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
   flex-grow: 1;
 }
+nav ul {
+  padding-left: 0;
+}
+.navbar-inner.nav ul li:first-child {
+  padding-top: 0;
+}
 nav ul li {
-  display: inline;
-  padding: 0 1rem;
+  display: block;
+  padding: 0.5rem 1rem;
 }
 nav ul li a {
   color: #000;
   padding: 0.5rem;
 }
-nav ul li:last-child{
-  padding-right: 0;
-}
+
 nav ul li.active a {
   background-color: #333;
   color: #fff;
@@ -64,8 +66,8 @@ nav ul li a:hover {
 } 
 .container {
   max-width: 100%;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -74,11 +76,12 @@ nav ul li a:hover {
   right: 0;
   left: 0;
   z-index: 1030;
+  text-align: center;
 }
 .flex {
   display: flex;
   justify-content: center;
-  padding: 5.5rem;
+  padding: 1.5rem;
 }
 .navbar {
   background-color: #f8f8f8;
@@ -111,11 +114,15 @@ nav ul li a:hover {
   animation-name: banner-text;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .green-box {
   background-color: aquamarine;
 }
+
 .yellow-box {
   background-color: rgb(212, 250, 125);
   position: relative;
@@ -131,7 +138,7 @@ nav ul li a:hover {
 }
 .text-box {
   background-color: #fff;
-  width: 50%;
+  width: 100%;
   padding: 0.5rem 1.5rem;
 }
 .one-col {
@@ -139,23 +146,53 @@ nav ul li a:hover {
   margin-bottom: 2rem;
   
 }
+
 .green-box-inside {
   display: flex;
   align-items: center;
-  height: 185px;
+  
 }
 .one-col,.two-cols {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   width: 100%;
   gap: 20px;
   overflow: hidden;
+  text-align: center;
 }
 
-@media (max-width:768px) {
+@media (min-width:992px) {
+  body {
+    padding-top: 100px;
+  }
   .one-col, .two-cols {
-    display: block;
+    display: flex;
+    text-align: left;
+  }
+  nav ul {
+    padding-left: 2rem;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  .flex {
+    padding: 4.5rem;
+  }
+  .text-box {
+    width: 50%;
+  }
+  .navbar>.container, .navbar-inner  {
+    display: flex;
+  }
+  nav ul li:last-child{
+    padding-right: 0;
+  }
+  .container {
+    max-width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 @keyframes content-rotate {
@@ -165,7 +202,7 @@ nav ul li a:hover {
     left: -857px;
   }
   50% {
-
+    
   }
   100% {
     transform: rotate(0);
